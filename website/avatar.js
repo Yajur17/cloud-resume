@@ -56,12 +56,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const counter = document.querySelectorAll(".counter-number");
+const counters = document.querySelectorAll(".counter-number");
+
 async function updateCounter() {
-    let response = await fetch(
-        "https://2nfo3hb4svry26aqbg4ysd7t5i0mqwdf.lambda-url.ap-south-1.on.aws/"
-    );
-    let data = await response.json();
-    counter.innerHTML = `👀 Views: ${data}`;
+    try {
+        let response = await fetch(
+            "https://2nfo3hb4svry26aqbg4ysd7t5i0mqwdf.lambda-url.ap-south-1.on.aws/"
+        );
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        let data = await response.json();
+        
+        // Update all counter-number elements
+        counters.forEach(counter => {
+            counter.innerHTML = `👀 Views: ${data}`;
+        });
+    } catch (error) {
+        console.error("Failed to fetch counter data:", error);
+    }
 }
+
 updateCounter();
