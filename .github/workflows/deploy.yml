@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - develop
 
 jobs:
   Build-and-Deploy:
@@ -24,4 +24,4 @@ jobs:
           
       # Deploy website to S3
       - name: Deploy to S3
-        run: aws s3 sync . s3://yajur-resume-challenge --delete
+        run: aws s3 sync . s3://sandbox-cloud --delete
