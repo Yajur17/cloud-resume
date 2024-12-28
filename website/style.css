@@ -146,6 +146,11 @@ body{
 #typed{
     color: var(--color-blue);
     text-overflow: ellipsis;
+ display: inline-block;
+  min-width: 200px;
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #typed_2{
