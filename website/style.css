@@ -112,7 +112,7 @@ body{
     height: 240px;
     border-radius: 50%;
     margin: auto;
-    background: url(website/avatar.png) no-repeat;
+    background: url(https://yajur-resume-challenge.s3.amazonaws.com/website/avatar.png) no-repeat;
     background-size: 110%;
     background-position: 40% 0;
 }
