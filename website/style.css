@@ -112,8 +112,6 @@ body{
     height: 240px;
     border-radius: 50%;
     margin: auto;
-    background-size: 110%;
-    background-position: 40% 0;
 }
 
 .author-img img {
