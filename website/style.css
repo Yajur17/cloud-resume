@@ -145,6 +145,7 @@ body{
 
 #typed{
     color: var(--color-blue);
+    text-overflow: ellipsis;
 }
 
 #typed_2{
