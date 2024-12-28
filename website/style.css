@@ -108,10 +108,12 @@ body{
 }
 
 .site-banner .banner-area .author {
-    width: 240px;
+   width: 240px;
     height: 240px;
     border-radius: 50%;
     margin: auto;
+    background-size: 110%;
+    background-position: 40% 0;
 }
 
 .author-img img {
@@ -119,7 +121,6 @@ body{
     height: 240px;
     border-radius: 50%;
     margin: auto;
-    object-fit: cover; /* To maintain the image's aspect ratio inside the circle */
 }
 
 .skill .bars p, .site-content .skill .bars span{
